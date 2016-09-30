@@ -10,6 +10,12 @@
 $ npm install --save proxy-support -g
 ```
 
+Or locally 
+
+```
+$ npm install --save proxy-support 
+```
+
 
 ## Usage
 
@@ -20,6 +26,14 @@ alias node="node -r proxy-support"
 ```
 
 This should work from [iojs@1.6.0](https://github.com/nodejs/io.js/blob/v1.x/CHANGELOG.md#2015-03-19-version-160-chrisdickinson).
+
+## From code 
+
+Will check HTTP_PROXY and HTTPS_PROXY environment settings and intercept http and https requests.
+
+```
+require('proxy-support');
+```
 
 ## License
 

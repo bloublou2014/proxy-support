@@ -23,7 +23,8 @@
     "proxy"
   ],
   "dependencies": {
-    "caw": "^1.0.0"
+    "caw": "^1.0.0",
+    "require-new": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "^2.2.5",
