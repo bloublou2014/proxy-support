@@ -13,6 +13,11 @@ if (process.env.HTTP_PROXY) {
 		http.globalAgent = http.Agent.globalAgent = httpProxyAgent;
 		var _httpRequest = http.request;
 		http.request = function (options, cb) {
+			if (typeof options === 'string') {
+				options = url.parse(options);
+			} else {
+				options = util._extend({}, options);
+			}
 			options.agent = options.agent || httpProxyAgent;
 			return _httpRequest.call(http, options, cb);
 		};
